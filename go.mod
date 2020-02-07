@@ -1,4 +1,4 @@
-module funplugin
+module github.com/Fiber-Man/funplugin
 
 go 1.13
 

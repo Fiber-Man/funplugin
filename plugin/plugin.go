@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"funplugin"
+	"github.com/Fiber-Man/funplugin"
 
 	"github.com/graphql-go/graphql"
 )
