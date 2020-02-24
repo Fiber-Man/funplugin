@@ -32,6 +32,7 @@ type Plugin interface {
 	AddField(string, graphql.Output, func(graphql.ResolveParams) (interface{}, error)) error
 	Query(arg ...interface{}) (interface{}, error)
 	Func(interface{}) (interface{}, error)
+	Setup() error
 }
 
 // PluginManger Interface
