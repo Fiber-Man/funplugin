@@ -1,6 +1,7 @@
 package funplugin
 
 import (
+	"github.com/gin-gonic/gin"
 	"github.com/graphql-go/graphql"
 	"github.com/jinzhu/gorm"
 )
@@ -21,6 +22,8 @@ type Schema struct {
 	Query        graphql.Fields
 	Mutation     graphql.Fields
 	Subscription graphql.Fields
+	Get          map[string]func(c *gin.Context)
+	Post         map[string]func(c *gin.Context)
 }
 
 // Plugin App Interface
