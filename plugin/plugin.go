@@ -27,3 +27,7 @@ func GetUnion(objname string) (*graphql.Union, bool) {
 func PluginList() map[string]funplugin.Plugin {
 	return pls.PluginList()
 }
+
+func AutoField(names string) (*graphql.Field, error) {
+	return pls.AutoField(names)
+}

@@ -32,10 +32,10 @@ type Plugin interface {
 	Init(*gorm.DB) error
 	Version() string
 	String() string
-	AddField(string, graphql.Output, func(graphql.ResolveParams) (interface{}, error)) error
 	Query(arg ...interface{}) (interface{}, error)
 	Func(interface{}) (interface{}, error)
 	Setup() error
+	// Upgrade() error
 }
 
 // PluginManger Interface
@@ -44,5 +44,6 @@ type PluginManger interface {
 	Get(appname string) (Plugin, error)
 	GetUnion(objname string) (*graphql.Union, bool)
 	GetObject(objname string) (*graphql.Object, bool)
+	AutoField(names string) (*graphql.Field, error)
 	PluginList() map[string]Plugin
 }
