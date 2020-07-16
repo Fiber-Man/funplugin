@@ -40,10 +40,7 @@ type Plugin interface {
 
 // PluginManger Interface
 type PluginManger interface {
-	Register(appname string) (Plugin, error)
-	Get(appname string) (Plugin, error)
-	GetUnion(objname string) (*graphql.Union, bool)
 	GetObject(objname string) (*graphql.Object, bool)
 	AutoField(names string) (*graphql.Field, error)
-	PluginList() map[string]Plugin
+	Go(query string, params map[string]interface{}) (interface{}, error)
 }
