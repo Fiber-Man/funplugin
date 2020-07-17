@@ -21,6 +21,6 @@ func AutoField(names string) (*graphql.Field, error) {
 	return pls.AutoField(names)
 }
 
-func Go(query string, VariableValues map[string]interface{}) (interface{}, error) {
-	return pls.Go(query, VariableValues)
+func Go(query string, VariableValues map[string]interface{}, dstStructPtr interface{}) (interface{}, error) {
+	return pls.Go(query, VariableValues, dstStructPtr)
 }

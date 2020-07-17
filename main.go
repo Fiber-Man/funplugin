@@ -42,5 +42,5 @@ type Plugin interface {
 type PluginManger interface {
 	GetObject(objname string) (*graphql.Object, bool)
 	AutoField(names string) (*graphql.Field, error)
-	Go(query string, params map[string]interface{}) (interface{}, error)
+	Go(query string, params map[string]interface{}, dstStructPtr interface{}) (interface{}, error)
 }
