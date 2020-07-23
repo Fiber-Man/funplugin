@@ -24,3 +24,7 @@ func AutoField(names string) (*graphql.Field, error) {
 func Go(query string, VariableValues map[string]interface{}, dstStructPtr interface{}) (interface{}, error) {
 	return pls.Go(query, VariableValues, dstStructPtr)
 }
+
+func NewSchemaBuilder(object interface{}) (*funplugin.ObjectSchema, error) {
+	return pls.NewSchemaBuilder(object)
+}
