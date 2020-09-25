@@ -55,6 +55,8 @@ type Plugin interface {
 	Func(interface{}) (interface{}, error)
 	Setup() error
 	// Upgrade() error
+	// Install error
+	// Dependencies map[string]string // map[name]version
 }
 
 // PluginManger Interface
